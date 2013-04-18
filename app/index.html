@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My Dashboard</title>
+  <link href="/libs/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="/libs/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+  <link href="css/app.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <div class="container-fluid page-wrapper">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#/">Home</a>
+        <ul class="nav">
+          <li class=""><a href="#/dashboard">MyDash-One</a></li>
+          <li><a href="#/dashboard2">MyDash-Two</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="row-fluid">
+
+      <div class="span3" ng-include="'partials/sidebar.html'"></div>
+
+      <!-- dashboards will come here -->
+      <div class="span9" ng-view>
+      
+      </div>
+    </div>
+
+  </div>
+
+  <!--div ng-view></div -->
+
+  <script type="text/javascript">
+  var app = {};
+  app.baseAPIURL = "http://psdev.syncapse.org/abi-dataservice/index.php";
+  </script>
+
+  <script src="lib/components/jquery/jquery.js" type="text/javascript"></script>
+  <script src="/libs/bootstrap.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/components/highcharts/highcharts.js" type="text/javascript"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

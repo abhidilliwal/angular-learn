@@ -1,0 +1,11 @@
+<!-- side-bar -->
+<h3>Filters</h3>
+<div ng-controller="FilterCtrl">
+  <ul class="selected-items">
+    <li ng-repeat="region in regions">
+      <label>
+      <input type="checkbox" ng-model="region.selected" ng-change="selectionChange()" />
+      {{region.name}}</label>
+    </li>
+  </ul>
+</div>

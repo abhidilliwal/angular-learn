@@ -1,0 +1,13 @@
+
+    <h3>Metrics</h3>
+    <div ng-controller="GraphCtrl">
+      <div class="selected-filters" ng-show="selectedRegions.data.length">
+          Selected Filters: 
+        <ul class="filters-list" >
+          <li ng-repeat="region in selectedRegions.data">
+            {{region.name}}</li>
+        </ul>
+      </div>
+      <chart value='{{chartData}}' type="area" height="400">
+      </chart>
+    </div>
